@@ -56,7 +56,7 @@ body{
 }
 
 .hidden{
-   display: none;
+   display: none !important;
 }
 
 .module-window{
@@ -67,6 +67,18 @@ body{
    box-shadow: 4px 0 16px rgba(0, 0, 0, .15);
    padding: 15px;
    position: relative;
+
+   z-index: 2;
+}
+
+.module{
+   height: 100vh;
+   width: 100%;
+   position: fixed;
+   top: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .overlay{
@@ -74,11 +86,10 @@ body{
    width: 100%;
    position: fixed;
    top: 0;
-   background-color: rgba(0, 0, 0, .3);
+   background-color: rgba(0, 0, 0, .2);
    backdrop-filter: blur(5px);
-   display: flex;
-   justify-content: center;
-   align-items: center;
+
+   z-index: 1;
 }
 
 .close-module{
@@ -87,4 +98,5 @@ body{
    top: 5px;
    border-radius: 7px;
    padding: 2px 4px;
+   cursor: pointer;
 }
